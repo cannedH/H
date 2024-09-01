@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐画廊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body-coffee">
+
+    <!-- 头像容器 -->
+    <div class="avatar-container-coffee">
+        <img src="images/image.jpg" alt="Avatar" class="avatar-coffee" id="avatar">
+    </div>
+
+    <div class="background-container">
+        <div class="background-base">
+            <img src="images/background.png" alt="Background Base">
+        </div>
+    </div>
+
+    <!-- 背景图片容器 -->
+    <div class="background-container">
+        <div class="background-images">
+            <img id="randomImg" src="" alt="Background Image">
+            <img id="nextImg" src="" alt="Background Image">
+        </div>
+    </div>
+
+    <!-- 音乐播放控件 -->
+    <div class="music-player">
+        <div class="music-info">
+            <span id="songTitle">当前歌曲标题</span>
+        </div>
+
+        <audio id="audioPlayer" preload="metadata">
+            <source src="music/coffee/Daily Routine 247.flac" type="audio/flac">
+        </audio>
+
+        <div class="controls">
+            <button id="prevBtn">上一首</button>
+            <button id="playPauseBtn">播放</button>
+            <button id="nextBtn">下一首</button>
+            <button id="playlistToggleBtn">播放列表</button>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div class="time-container">
+            <span id="currentTime">00:00</span> / <span id="totalTime">00:00</span>
+        </div>
+
+        <!--播放列表，默认隐藏-->
+        <div id="playlist-container" class="hidden">
+            <ul id="playlist">
+                <li class="active" data-index="0">Daily Routine 247</li>
+                <li data-index="1">卡班诺的兔子主题曲3</li>
+                <li data-index="2">我们的任务</li>
+                <li data-index="3">Blooming Moon</li>
+                <li data-index="4">Constant Moderato Piano Ver.</li>
+                <li data-index="5">Constant Moderato</li>
+                <li data-index="6">Hello to Halo</li>
+                <li data-index="7">Koi is Love</li>
+                <li data-index="8">Luminous Memory</li>
+                <li data-index="9">Midsummer cat</li>
+                <li data-index="10">Pixel Time</li>
+                <li data-index="11">Sugar story</li>
+                <li data-index="12">Usagi Flap</li>
+                <li data-index="13">After School Dessert</li>
+                <li data-index="14">Connected Sky</li>
+                <!-- 可以根据需要继续添加歌曲 -->
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
